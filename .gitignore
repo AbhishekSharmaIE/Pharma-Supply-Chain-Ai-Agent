@@ -200,6 +200,7 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+**/pharma_supply_chain_agent_cursor_prompt.md
 
 # Marimo
 marimo/_static/

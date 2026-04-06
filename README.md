@@ -3,7 +3,7 @@
 ## Build Progress
 
 - [x] Step 0 - Project scaffold created
-- [ ] Step 1 - Data models (Pydantic)
+- [x] Step 1 - Data models (Pydantic)
 - [ ] Step 2 - Rule engine
 - [ ] Step 3 - Prompt builder
 - [ ] Step 4 - LLM client
@@ -22,3 +22,9 @@
 Created the full baseline project structure and placeholder files for backend,
 frontend, automation simulator, docs, and container setup so implementation can
 proceed incrementally.
+
+### Step 1 Notes
+
+Implemented core backend data contracts in Pydantic v2 style:
+- `backend/models/order.py`: `Order` and `OrderBatch`
+- `backend/models/response.py`: `PriorityLevel`, `AgentDecision`, `BatchResponse`

@@ -5,7 +5,7 @@
 - [x] Step 0 - Project scaffold created
 - [x] Step 1 - Data models (Pydantic)
 - [x] Step 2 - Rule engine
-- [ ] Step 3 - Prompt builder
+- [x] Step 3 - Prompt builder
 - [ ] Step 4 - LLM client
 - [ ] Step 5 - Decision parser + confidence logic
 - [ ] Step 6 - FastAPI app + routes
@@ -34,3 +34,9 @@ Implemented core backend data contracts in Pydantic v2 style:
 Implemented `backend/agent/rule_engine.py` with:
 - `evaluate(order)` for the 5 pre-LLM business rules
 - `get_rule_summary(flags)` to generate a readable bullet-list summary for prompt injection
+
+### Step 3 Notes
+
+Implemented `backend/agent/prompt_builder.py` with:
+- Static system prompt encoding business objectives, weighted rules, and strict JSON output format
+- Dynamic user prompt generation from `Order` + rule flags, including days-until-expiry and structured rule summary

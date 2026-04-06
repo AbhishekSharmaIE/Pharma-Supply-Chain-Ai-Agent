@@ -4,7 +4,7 @@
 
 - [x] Step 0 - Project scaffold created
 - [x] Step 1 - Data models (Pydantic)
-- [ ] Step 2 - Rule engine
+- [x] Step 2 - Rule engine
 - [ ] Step 3 - Prompt builder
 - [ ] Step 4 - LLM client
 - [ ] Step 5 - Decision parser + confidence logic
@@ -28,3 +28,9 @@ proceed incrementally.
 Implemented core backend data contracts in Pydantic v2 style:
 - `backend/models/order.py`: `Order` and `OrderBatch`
 - `backend/models/response.py`: `PriorityLevel`, `AgentDecision`, `BatchResponse`
+
+### Step 2 Notes
+
+Implemented `backend/agent/rule_engine.py` with:
+- `evaluate(order)` for the 5 pre-LLM business rules
+- `get_rule_summary(flags)` to generate a readable bullet-list summary for prompt injection

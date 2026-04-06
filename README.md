@@ -12,7 +12,7 @@
 - [x] Step 7 - Sample data + CSV parser
 - [x] Step 8 - React frontend dashboard
 - [x] Step 9 - Power Automate simulator
-- [ ] Step 10 - Responsible AI documentation
+- [x] Step 10 - Responsible AI documentation
 - [ ] Step 11 - Tests
 - [ ] Step 12 - Docker + environment
 - [ ] Step 13 - Final README polish
@@ -85,3 +85,13 @@ Implemented `power_automate_sim/batch_trigger.py`:
 - Prints a formatted batch summary (batch id, totals, priority breakdown, human-review order IDs)
 - Moves processed files into `power_automate_sim/watch_folder/processed/`
 - Supports `--demo` to auto-copy `backend/data/sample_orders.csv` into the watch folder
+
+### Step 10 Notes
+
+Completed `backend/responsible_ai/failure_modes.md` with structured coverage of:
+- Hallucination risk and confidence-triggered fallbacks
+- Conflict/edge-case deterministic escalation paths
+- Model drift benchmarking expectations
+- Customer-tier bias monitoring controls
+- Data privacy risk and PII-scrubbing roadmap
+- Explicit confidence threshold action policy table

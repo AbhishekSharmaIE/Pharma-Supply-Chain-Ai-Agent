@@ -10,7 +10,7 @@
 - [x] Step 5 - Decision parser + confidence logic
 - [x] Step 6 - FastAPI app + routes
 - [x] Step 7 - Sample data + CSV parser
-- [ ] Step 8 - React frontend dashboard
+- [x] Step 8 - React frontend dashboard
 - [ ] Step 9 - Power Automate simulator
 - [ ] Step 10 - Responsible AI documentation
 - [ ] Step 11 - Tests
@@ -68,3 +68,11 @@ Implemented backend API wiring:
 Completed data-ingestion baseline:
 - `backend/utils/csv_parser.py` parses CSV bytes with `csv.DictReader`, validates via `Order`, and skips invalid rows with warning logs
 - `backend/data/sample_orders.csv` populated with 20 realistic pharma orders across Irish locations for local testing and demo flows
+
+### Step 8 Notes
+
+Implemented frontend dashboard foundation in `frontend/`:
+- Vite + React app setup (`package.json`, `vite.config.js`, `index.html`, `src/main.jsx`)
+- API integration layer in `src/api/agentApi.js` for CSV upload and JSON batch prioritization
+- Dashboard + Audit Log pages and all core components (`UploadPanel`, `OrderTable`, `OrderCard`, `ConfidenceGauge`, `HumanReviewQueue`, `SummaryChart`)
+- Batch run persistence to localStorage for audit history and interactive order drill-down

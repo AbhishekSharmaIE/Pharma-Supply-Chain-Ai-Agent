@@ -14,7 +14,7 @@
 - [x] Step 9 - Power Automate simulator
 - [x] Step 10 - Responsible AI documentation
 - [x] Step 11 - Tests
-- [ ] Step 12 - Docker + environment
+- [x] Step 12 - Docker + environment
 - [ ] Step 13 - Final README polish
 
 ### Step 0 Notes
@@ -103,3 +103,11 @@ Implemented backend test coverage:
 - `backend/tests/test_agent.py` covers rule engine, prompt builder, confidence evaluator, decision parser, and full mock pipeline
 - `backend/tests/test_api.py` covers `/health`, `/orders/prioritize`, and `/orders/upload-csv`
 - `backend/tests/test_csv_parser.py` covers valid parsing and invalid-row skipping behavior
+
+### Step 12 Notes
+
+Completed runtime and container config:
+- `backend/Dockerfile` for FastAPI service image build and startup
+- `backend/.env.example` with Azure OpenAI, mock toggle, and confidence/logging config
+- `docker-compose.yml` with backend + frontend services, ports, env file, and backend data volume
+- `frontend/Dockerfile` added so compose can build/run the frontend service cleanly

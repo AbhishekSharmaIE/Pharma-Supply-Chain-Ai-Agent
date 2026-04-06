@@ -11,7 +11,7 @@
 - [x] Step 6 - FastAPI app + routes
 - [x] Step 7 - Sample data + CSV parser
 - [x] Step 8 - React frontend dashboard
-- [ ] Step 9 - Power Automate simulator
+- [x] Step 9 - Power Automate simulator
 - [ ] Step 10 - Responsible AI documentation
 - [ ] Step 11 - Tests
 - [ ] Step 12 - Docker + environment
@@ -76,3 +76,12 @@ Implemented frontend dashboard foundation in `frontend/`:
 - API integration layer in `src/api/agentApi.js` for CSV upload and JSON batch prioritization
 - Dashboard + Audit Log pages and all core components (`UploadPanel`, `OrderTable`, `OrderCard`, `ConfidenceGauge`, `HumanReviewQueue`, `SummaryChart`)
 - Batch run persistence to localStorage for audit history and interactive order drill-down
+
+### Step 9 Notes
+
+Implemented `power_automate_sim/batch_trigger.py`:
+- Watches `power_automate_sim/watch_folder/` for new CSV files using `watchdog` (5-second polling loop)
+- Sends each detected CSV to `POST /orders/upload-csv`
+- Prints a formatted batch summary (batch id, totals, priority breakdown, human-review order IDs)
+- Moves processed files into `power_automate_sim/watch_folder/processed/`
+- Supports `--demo` to auto-copy `backend/data/sample_orders.csv` into the watch folder

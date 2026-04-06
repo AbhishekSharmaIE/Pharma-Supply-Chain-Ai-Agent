@@ -103,6 +103,14 @@ Behavior:
 - prints batch summary and human-review IDs,
 - moves processed files to `watch_folder/processed/`.
 
+## 🧾 Legacy CSV Compatibility
+
+The backend now supports two CSV formats for upload:
+- **Native order format** (`order_id`, `product_name`, `quantity`, etc.)
+- **Legacy supply-chain format** (`ID`, `Stage`, `Activity`, `Description`, `Cost (GHS)`, `Revenue (GHS)`, `Time (Days)`, `Region`)
+
+When a legacy file is uploaded, the parser auto-maps those fields into the order schema so the batch can still flow through the same prioritization pipeline.
+
 ## 📈 Evaluation Results
 
 - Achieved **92% agreement** with human-coded labels on a 200-order benchmark set.

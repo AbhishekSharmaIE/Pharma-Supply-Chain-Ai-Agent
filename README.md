@@ -13,7 +13,7 @@
 - [x] Step 8 - React frontend dashboard
 - [x] Step 9 - Power Automate simulator
 - [x] Step 10 - Responsible AI documentation
-- [ ] Step 11 - Tests
+- [x] Step 11 - Tests
 - [ ] Step 12 - Docker + environment
 - [ ] Step 13 - Final README polish
 
@@ -95,3 +95,11 @@ Completed `backend/responsible_ai/failure_modes.md` with structured coverage of:
 - Customer-tier bias monitoring controls
 - Data privacy risk and PII-scrubbing roadmap
 - Explicit confidence threshold action policy table
+
+### Step 11 Notes
+
+Implemented backend test coverage:
+- `backend/tests/conftest.py` sets `USE_MOCK_LLM=true` for test runs
+- `backend/tests/test_agent.py` covers rule engine, prompt builder, confidence evaluator, decision parser, and full mock pipeline
+- `backend/tests/test_api.py` covers `/health`, `/orders/prioritize`, and `/orders/upload-csv`
+- `backend/tests/test_csv_parser.py` covers valid parsing and invalid-row skipping behavior

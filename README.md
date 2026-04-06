@@ -8,7 +8,7 @@
 - [x] Step 3 - Prompt builder
 - [x] Step 4 - LLM client
 - [x] Step 5 - Decision parser + confidence logic
-- [ ] Step 6 - FastAPI app + routes
+- [x] Step 6 - FastAPI app + routes
 - [ ] Step 7 - Sample data + CSV parser
 - [ ] Step 8 - React frontend dashboard
 - [ ] Step 9 - Power Automate simulator
@@ -54,3 +54,11 @@ Implemented `backend/agent/llm_client.py` with:
 Implemented:
 - `backend/agent/decision_parser.py` with markdown-fence stripping, safe JSON parsing, required-field validation, strict priority/confidence checks, and `DecisionParseError`
 - `backend/agent/confidence.py` with deterministic human-review rules and expiry-risk override (`LOW` -> `MEDIUM`)
+
+### Step 6 Notes
+
+Implemented backend API wiring:
+- `backend/main.py` with FastAPI app metadata, CORS for `http://localhost:5173`, and route registration
+- `backend/routes/health.py` for `GET /health`
+- `backend/routes/orders.py` for `POST /orders/prioritize` and `POST /orders/upload-csv` using async batch processing (`asyncio.gather`)
+- Added CSV endpoint error handling (400 malformed/empty CSV, 503 LLM failures)

@@ -1,6 +1,6 @@
 import logging
 
-from backend.models.response import AgentDecision, PriorityLevel
+from models.response import AgentDecision, PriorityLevel
 
 logger = logging.getLogger(__name__)
 

@@ -1,6 +1,6 @@
 from datetime import date
 
-from backend.models.order import Order
+from models.order import Order
 
 
 class PromptBuilder:

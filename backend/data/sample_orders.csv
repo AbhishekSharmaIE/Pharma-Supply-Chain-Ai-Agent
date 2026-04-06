@@ -1,0 +1,21 @@
+order_id,product_name,quantity,customer_tier,urgency_flag,stock_available,expiry_date,customer_location,warehouse_location,order_date
+ORD-1001,Insulin Glargine,850,platinum,true,500,2026-04-20,Dublin,Dublin,2026-04-05
+ORD-1002,Amoxicillin 500mg,1200,platinum,true,700,2026-04-18,Cork,Cork,2026-04-05
+ORD-1003,Atorvastatin 40mg,600,platinum,true,350,2026-04-25,Galway,Galway,2026-04-05
+ORD-1004,Metformin 1000mg,700,gold,true,650,2026-06-10,Dublin,Cork,2026-04-05
+ORD-1005,Lisinopril 10mg,450,gold,true,700,2026-07-12,Limerick,Limerick,2026-04-05
+ORD-1006,Omeprazole 20mg,520,standard,true,800,2026-05-20,Waterford,Dublin,2026-04-05
+ORD-1007,Losartan 50mg,500,gold,false,300,2026-05-01,Cork,Dublin,2026-04-05
+ORD-1008,Salbutamol Inhaler,320,platinum,false,600,2026-06-28,Galway,Cork,2026-04-05
+ORD-1009,Azithromycin 250mg,950,standard,false,900,2026-05-05,Dublin,Dublin,2026-04-05
+ORD-1010,Warfarin 5mg,410,standard,false,420,2026-08-30,Limerick,Cork,2026-04-05
+ORD-1011,Clopidogrel 75mg,260,gold,false,400,2026-09-15,Waterford,Waterford,2026-04-05
+ORD-1012,Amlodipine 5mg,380,standard,false,500,2026-10-01,Dublin,Galway,2026-04-05
+ORD-1013,Cefuroxime 500mg,740,gold,false,710,2026-06-14,Cork,Cork,2026-04-05
+ORD-1014,Levothyroxine 100mcg,290,standard,false,350,2026-11-20,Galway,Dublin,2026-04-05
+ORD-1015,Paracetamol IV 1g,560,gold,false,560,2026-07-25,Limerick,Galway,2026-04-05
+ORD-1016,Ibuprofen 400mg,200,standard,false,700,2027-01-30,Waterford,Cork,2026-04-05
+ORD-1017,Cetirizine 10mg,340,standard,false,900,2026-12-14,Dublin,Limerick,2026-04-05
+ORD-1018,Hydrocortisone Cream,180,gold,false,400,2026-10-22,Cork,Galway,2026-04-05
+ORD-1019,Folic Acid 5mg,150,standard,false,300,2026-09-29,Galway,Limerick,2026-04-05
+ORD-1020,Vitamin D3 1000IU,220,standard,false,1000,2027-02-11,Waterford,Dublin,2026-04-05

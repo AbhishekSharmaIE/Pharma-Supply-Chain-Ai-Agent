@@ -9,7 +9,7 @@
 - [x] Step 4 - LLM client
 - [x] Step 5 - Decision parser + confidence logic
 - [x] Step 6 - FastAPI app + routes
-- [ ] Step 7 - Sample data + CSV parser
+- [x] Step 7 - Sample data + CSV parser
 - [ ] Step 8 - React frontend dashboard
 - [ ] Step 9 - Power Automate simulator
 - [ ] Step 10 - Responsible AI documentation
@@ -62,3 +62,9 @@ Implemented backend API wiring:
 - `backend/routes/health.py` for `GET /health`
 - `backend/routes/orders.py` for `POST /orders/prioritize` and `POST /orders/upload-csv` using async batch processing (`asyncio.gather`)
 - Added CSV endpoint error handling (400 malformed/empty CSV, 503 LLM failures)
+
+### Step 7 Notes
+
+Completed data-ingestion baseline:
+- `backend/utils/csv_parser.py` parses CSV bytes with `csv.DictReader`, validates via `Order`, and skips invalid rows with warning logs
+- `backend/data/sample_orders.csv` populated with 20 realistic pharma orders across Irish locations for local testing and demo flows

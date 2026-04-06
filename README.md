@@ -6,7 +6,7 @@
 - [x] Step 1 - Data models (Pydantic)
 - [x] Step 2 - Rule engine
 - [x] Step 3 - Prompt builder
-- [ ] Step 4 - LLM client
+- [x] Step 4 - LLM client
 - [ ] Step 5 - Decision parser + confidence logic
 - [ ] Step 6 - FastAPI app + routes
 - [ ] Step 7 - Sample data + CSV parser
@@ -40,3 +40,11 @@ Implemented `backend/agent/rule_engine.py` with:
 Implemented `backend/agent/prompt_builder.py` with:
 - Static system prompt encoding business objectives, weighted rules, and strict JSON output format
 - Dynamic user prompt generation from `Order` + rule flags, including days-until-expiry and structured rule summary
+
+### Step 4 Notes
+
+Implemented `backend/agent/llm_client.py` with:
+- `AzureOpenAIClient` using env-configured Azure OpenAI credentials
+- `complete(...)` with `temperature=0.2`, `max_tokens=600`, token usage logging, and 3-attempt exponential backoff on rate limiting
+- `LLMClientError` for unrecoverable failures
+- `MockLLMClient` and `get_llm_client()` toggle via `USE_MOCK_LLM=true`
